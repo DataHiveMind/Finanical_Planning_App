@@ -148,7 +148,7 @@ app.post('/api/plan', async (req, res) => {
 });
 
 // Fallback to index.html for any unknown routes
-app.get('*', (req, res) => {
+app.get('/(.*)', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 

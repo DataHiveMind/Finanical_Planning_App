@@ -147,8 +147,8 @@ app.post('/api/plan', async (req, res) => {
     }
 });
 
-// Fallback to index.html for any unknown routes
-app.get('/(.*)', (req, res) => {
+// Fallback to index.html for any unknown routes (Bypasses the Express 5 router regex)
+app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 

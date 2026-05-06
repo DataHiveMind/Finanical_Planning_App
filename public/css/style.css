@@ -1,0 +1,291 @@
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Authentication Container */
+.auth-container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+/* Form Inputs */
+.input-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Buttons and Links */
+.btn-primary {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.auth-switch {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-switch a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Error Handling */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    min-height: 1.2em; /* Keeps layout from jumping when error appears */
+}
+
+/* --- Base Reset & Dark Theme Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /* Deep blue/black background with a subtle mathematical grid */
+    background-color: #0b1121;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Authentication Container --- */
+.auth-container, .dashboard-container {
+    background: #111827;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* A glowing accent line at the top to look like a hardware interface */
+.auth-container::before, .dashboard-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #f1f5f9;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.5rem;
+}
+
+/* --- Form Inputs --- */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Consolas', 'Courier New', monospace; /* Monospace for financial data feel */
+}
+
+.input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- Buttons and Links --- */
+.btn-primary {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    transform: translateY(-1px);
+}
+
+.auth-switch {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.auth-switch a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.auth-switch a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+/* --- Error & Loading States --- */
+.error-message {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    min-height: 1.2em;
+    font-weight: 500;
+}
+
+.loading {
+    color: #10b981;
+    font-family: 'Consolas', monospace;
+    letter-spacing: 1px;
+}
+
+/* --- Dashboard Specific Overrides --- */
+.dashboard-container {
+    max-width: 900px;
+    margin: 2rem;
+}
+
+.results-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #0f172a;
+    border-radius: 8px;
+    border-left: 4px solid #10b981;
+    display: none;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.results-container strong {
+    color: #3b82f6;
+}

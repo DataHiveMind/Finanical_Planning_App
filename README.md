@@ -35,8 +35,8 @@ The database consists of a `User` collection with the following schema:
 6. Open your browser and navigate to `http://localhost:3000`
 
 ## Submission Details
-* **GitHub Repository:** [Insert Link]
-* **Deployed Web App:** [Insert Render Link]
-* **Test Credentials:** * Username: `Proftester`
+* **Deployed Web App:** [\[website\]](https://ai-wealth-planner.onrender.com)
+* **Test Credentials:** 
+   * Username: `Proftester`
     * Email: `grad@me.com`
     * Password `123456 `

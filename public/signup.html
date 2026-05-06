@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Financial Planner - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <header>
+            <h1>AI Wealth Planner</h1>
+            <p>Create your account to start planning.</p>
+        </header>
+
+        <form id="signupForm" class="auth-form">
+            <h2>Sign Up</h2>
+            
+            <div class="input-group">
+                <label for="signupUsername">Username</label>
+                <input type="text" id="signupUsername" name="username" required placeholder="Choose a username">
+            </div>
+
+            <div class="input-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="password" required placeholder="Create a password">
+            </div>
+
+            <button type="submit" class="btn-primary">Create Account</button>
+            <div id="signupError" class="error-message"></div>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="index.html">Sign in here</a></p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "finanical_planning_app",
+  "version": "1.0.0",
+  "description": "This is a full-stack GenAI web application designed to act as a personalized financial advisor. Users can create an account, securely log in, and input their financial metrics to generate a customized, AI-driven financial plan and asset allocation strategy.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataHiveMind/Finanical_Planning_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DataHiveMind/Finanical_Planning_App/issues"
+  },
+  "homepage": "https://github.com/DataHiveMind/Finanical_Planning_App#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.6.1"
+  }
+}

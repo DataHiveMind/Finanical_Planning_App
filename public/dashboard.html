@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Financial Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Dashboard specific styles */
+        body { align-items: flex-start; padding: 2rem; }
+        .dashboard-container {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px; /* Wider than the login box */
+            margin: 0 auto;
+        }
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .btn-logout {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-logout:hover { background-color: #c0392b; }
+        
+        .planner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+        
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .results-container {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            display: none; /* Hidden until AI responds */
+        }
+
+        .loading {
+            text-align: center;
+            display: none;
+            margin-top: 1rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="header-actions">
+            <div>
+                <h1>Quantitative Financial Advisor</h1>
+                <p>Welcome, <span id="userNameDisplay">User</span>. Let's optimize your allocation.</p>
+            </div>
+            <button id="logoutBtn" class="btn-logout">Logout</button>
+        </div>
+
+        <form id="financialForm">
+            <div class="planner-grid">
+                <div class="input-group">
+                    <label for="monthlyIncome">Monthly Income ($)</label>
+                    <input type="number" id="monthlyIncome" required min="0" placeholder="e.g. 5000">
+                </div>
+
+                <div class="input-group">
+                    <label for="currentSavings">Current Savings ($)</label>
+                    <input type="number" id="currentSavings" required min="0" placeholder="e.g. 15000">
+                </div>
+
+                <div class="input-group">
+                    <label for="riskTolerance">Risk Tolerance</label>
+                    <select id="riskTolerance" required>
+                        <option value="" disabled selected>Select an optimization profile...</option>
+                        <option value="Conservative">Conservative (Capital Preservation)</option>
+                        <option value="Moderate">Moderate (Balanced Growth)</option>
+                        <option value="Aggressive">Aggressive (High Yield / Equities)</option>
+                        <option value="Algorithmic">Maximum Alpha (Quantitative/Alternative Assets)</option>
+                    </select>
+                </div>
+
+                <div class="input-group" style="grid-column: span 2;">
+                    <label for="financialGoal">Primary Financial Goal</label>
+                    <textarea id="financialGoal" required placeholder="e.g., I want to build a $100k down payment for a house in 5 years while maintaining a liquid emergency fund."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" id="generateBtn">Generate Optimization Plan</button>
+        </form>
+
+        <div id="loadingIndicator" class="loading">
+            Calculating optimal strategy via Gemini AI...
+        </div>
+
+        <div id="aiResults" class="results-container">
+            <h3>Your Personalized Strategy</h3>
+            <div id="planContent"></div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -37,5 +37,6 @@ The database consists of a `User` collection with the following schema:
 ## Submission Details
 * **GitHub Repository:** [Insert Link]
 * **Deployed Web App:** [Insert Render Link]
-* **Test Credentials:** * Username: `ProfessorTest`
-    * Password: `GradeMe123!`
+* **Test Credentials:** * Username: `Proftester`
+    * Email: `grad@me.com`
+    * Password `123456 `
